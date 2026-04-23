@@ -1,0 +1,16 @@
+def addToArrayForm(A, K):
+    A.reverse()
+    
+    i = 0
+    while i < len(A) or K > 0:
+        if i < len(A):
+            total = A[i] + (K % 10)
+            A[i] = total % 10
+            K = K // 10 + total // 10
+        else:
+            A.append(K % 10)
+            K //= 10
+        i += 1
+    
+    A.reverse()
+    return A
