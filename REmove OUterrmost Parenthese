@@ -1,0 +1,18 @@
+# Remove :Outermmost Paranthese
+def rop(s):
+  resstr=""
+  open_count=0
+  for c in s:
+    if (c=='(' and open_count > 0): # Check if it's an opening parenthesis and not the outermost one
+      resstr+=c
+    elif (c==')' and open_count > 1): # Check if it's a closing parenthesis and not the outermost one
+      resstr+=c
+
+    if c == '(': # Update count after checking conditions to ensure correct behavior for outermost
+        open_count += 1
+    elif c == ')':
+        open_count -= 1
+
+  return resstr
+s="(()())(())"
+print(rop(s))#()()()
