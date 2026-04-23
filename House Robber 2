@@ -1,0 +1,26 @@
+def solve(nums, s, e):
+    ans = max(nums[s], nums[s + 1])
+    pmax = nums[s]
+
+    for i in range(s + 2, e + 1):
+        profit = nums[i] + pmax
+        pmax = ans
+        ans = max(ans, profit)
+
+    return ans
+
+
+def rob(nums):
+    n = len(nums)
+    
+    if n == 1:
+        return nums[0]
+    elif n == 2:
+        return max(nums[0], nums[1])
+
+    op1 = solve(nums, 0, n - 2)
+    op2 = solve(nums, 1, n - 1)
+
+    return max(op1, op2)
+nus=[1,2,3,1,5]
+print(rob(nus))#8
