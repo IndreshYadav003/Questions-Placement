@@ -1,0 +1,21 @@
+#rotate an array by k positions(shiffting element form last index to front)
+array=[2,4,55,44,33,22,66,6,44,64,3,34,5,9,33,9]
+def reverse(array,start,end):
+    while start<end:
+        array[start],array[end]=array[end],array[start]
+        start+=1
+        end-=1
+def rotate(array,k):
+    k=k%len(array)
+    reverse(array,0,len(array)-1)
+    reverse(array,0,k-1)
+    reverse(array,k,len(array)-1)
+        
+print(array)
+rotate(array,1)
+print(array)
+'''
+[2, 4, 55, 44, 33, 22, 66, 6, 44, 64, 3, 34, 5, 9, 33, 9]
+[9, 2, 4, 55, 44, 33, 22, 66, 6, 44, 64, 3, 34, 5, 9, 33]
+
+'''
