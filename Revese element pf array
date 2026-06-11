@@ -1,0 +1,9 @@
+array=[2,4,6,8,2,1,0,-5,44,5]
+fornt=0
+end=len(array)-1
+while fornt<=end :
+    array[fornt],array[end]=array[end],array[fornt]
+    end-=1
+    fornt+=1
+
+print(array)#[5, 44, -5, 0, 1, 2, 8, 6, 4, 2]
