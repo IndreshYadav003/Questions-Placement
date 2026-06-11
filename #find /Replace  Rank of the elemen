@@ -1,0 +1,22 @@
+#find /Replace  Rank of the element   tc=O(n^2)
+array=[43,54,22,43,35,232,54,2]
+def rank(array):
+ for i in range(len(array)):
+  count=0
+  for j in range(len(array)):
+    if array[i]<=array[j]:
+      count=count+1
+  print(array[i],count)
+rank(array)
+
+'''
+43 5
+54 3
+22 7
+43 5
+35 6
+232 1
+54 3
+2 8
+'''
+
