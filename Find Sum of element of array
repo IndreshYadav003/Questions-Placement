@@ -1,0 +1,8 @@
+array=[5, 44, -5, 0, 1, 2, 8, 6, 4, 2]
+
+def sumElement(array):
+  sum_val=0
+  for i in array:
+    sum_val+=i
+  return sum_val
+print(sumElement(array))#67
