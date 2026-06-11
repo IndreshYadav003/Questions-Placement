@@ -1,0 +1,7 @@
+array=[2,4,6,8,2,1,0,-5,44,5]
+min=array[0]
+for i in range(len(array)):
+    if array[i]<min:
+        min=array[i]
+print(min)#-5
+#tc=O(n)
