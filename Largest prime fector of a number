@@ -1,0 +1,16 @@
+#Largest prime fector of a number
+number=int(input("Enter Number===:"))
+maxfector=0
+if number%2==0:
+  a=0
+  while number%2==0:
+      number/=2
+      a=2
+  maxfector=a
+
+for i in range(3,int(number**0.5)+1,2):
+  if number%i==0:
+    while number%i==0:
+      number/=i
+      maxfector=i   
+print(maxfector)
