@@ -1,0 +1,15 @@
+#find Remainder without % operator
+first_Number_numerator=int(input("Enter First Number===:"))
+second_Number_denominator=int(input("Enter Second Number===:"))
+flag=True
+quotient=0
+remainder=0
+while flag :
+    if first_Number_numerator>=second_Number_denominator:
+        first_Number_numerator=first_Number_numerator-second_Number_denominator
+        quotient=quotient+1
+    else:
+        remainder=first_Number_numerator
+        flag=False
+print("Remainder is===:",remainder)
+print("Quotient is===:",quotient)
