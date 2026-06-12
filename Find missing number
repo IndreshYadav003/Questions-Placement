@@ -1,0 +1,20 @@
+number_Set = [1, 2, 3, 4,5, 6, 7,9]
+print("Method 1: Iterative check")
+for i in range(len(number_Set)):
+    if i + 1 not in number_Set:
+        print("Missing number (Method 1):", i + 1)
+
+# Method 2: XOR operator (more robust for single missing number)
+n= len(number_Set) + 1
+
+xor_all = 0
+for i in range(1, n + 1):
+    xor_all ^= i
+
+xor_array = 0
+for num in number_Set:
+    xor_array ^= num
+
+missing_number = xor_all ^ xor_array
+
+print("Missing number:", missing_number)
