@@ -1,0 +1,15 @@
+import math
+
+# find number of zeroes in any number factorial
+number = int(input("enter number: "))
+
+def find_zeroes_in_factorial(n):
+    count = 0
+    # floor(n/5) + floor(n/25) + floor(n/125) + ...
+    i = 5
+    while n // i >= 1:
+        count += n // i
+        i *= 5
+    return count
+
+print(find_zeroes_in_factorial(number))
