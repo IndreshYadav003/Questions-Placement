@@ -1,0 +1,20 @@
+#All prime fector of a number
+number=int(input("Enter Number===:"))
+listFector=[]
+if number%2==0:
+  a=0
+  while number%2==0:
+      number/=2
+      a=2
+  listFector.append(a)
+
+for i in range(3,int(number**0.5)+1,2):
+  if number%i==0:
+    while number%i==0:
+      number/=i
+      listFector.append(i)
+print(listFector)   
+''' output
+Enter Number===:210
+[2, 3, 5, 7]
+  '''
